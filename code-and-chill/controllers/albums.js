@@ -2,7 +2,8 @@ const Album = require('../models/album');
 
 module.exports = {
     new: newAlbum,
-    create
+    create,
+    index
 }
 
 function newAlbum(req, res) {
@@ -13,9 +14,21 @@ function newAlbum(req, res) {
 function create(req, res) {
     try {
         Album.create(req.body)
-        res.redirect('/')
+        res.redirect('/albums')
     }
     catch (err) {
         console.log(err)
     }
+}
+
+async function index(req, res) {
+  try {
+    const allAlbums = await Album.find()
+    res.render('index', {
+      album: allAlbums,
+    })
+  }
+  catch (err) {
+    console.log(err)
+  }
 }
