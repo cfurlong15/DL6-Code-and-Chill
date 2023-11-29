@@ -2,5 +2,19 @@
 
 <h2>Add a New Album</h2>
 <form id="new-form" action="/new" method="POST"></form>
-
+<label>Title:
+    <input type="text" name="title">
+  </label><br>
+  <label>Artist:
+    <input type="string" name="artist">
+  </label>
+  <label>Release Year:
+    <input type="number" name="releaseYear">
+  </label><br>
+  
+  <!-- <label>Cast (separate actors with commas):
+    <input type="text" name="cast"> -->
+  <button type="submit">Add Movie</button>
+</form>
+<p><%= errorMsg %></p>
 <%- include('../partials/footer') %>
