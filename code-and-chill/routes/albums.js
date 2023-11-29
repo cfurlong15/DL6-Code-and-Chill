@@ -9,5 +9,7 @@ router.post('/', albumsCtrl.create);
 
 router.get('/albums', albumsCtrl.index);
 
+router.get('/albums/:id', albumsCtrl.show);
+
 
 module.exports = router;

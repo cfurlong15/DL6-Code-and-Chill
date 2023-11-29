@@ -2,10 +2,10 @@
 
 <% album.forEach(function(a) { %>
 <div>
-    <div><%= a.title %> </div>
+    <div><a href="/albums/<%= a._id %>"><%= a.title %> </a></div>
     <div><%= a.artist %></div>
     <div><%= a.releaseYear %> </div>
 </div>
 <%})%>
 
-<%- include('../partials/footer') %>
+<%- include('../partials/header') %>

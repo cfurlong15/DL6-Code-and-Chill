@@ -15,8 +15,6 @@ const albumSchema = new Schema({
         },
         min: 1930
     },
-}, {
-    timestamps: true
 });
 
 const Album = mongoose.model('Album', albumSchema)
