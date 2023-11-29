@@ -5,7 +5,7 @@ const albumsCtrl = require('../controllers/albums');
 
 router.get('/new', albumsCtrl.new);
 
-router.post('/new', albumsCtrl.create);
+router.post('/', albumsCtrl.create);
 
 
 module.exports = router;
