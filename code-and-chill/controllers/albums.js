@@ -10,10 +10,10 @@ function newAlbum(req, res) {
 }
 
 
-async function create(req, res) {
+function create(req, res) {
     try {
         Album.create(req.body)
-        res.redirect('/albums')
+        res.redirect('/')
     }
     catch (err) {
         console.log(err)
